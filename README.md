@@ -3,7 +3,7 @@
 A Linktree-style page in React displaying my profile and social links with one JavaScript feature that brings it to life.
 
 ## JavaScript Feature
-1. **Dark / light mode toggle** — switch themes; preference sticks on refresh.
+1. **Link click counter** — track the amount of clicks for each link; counts persist after page refresh.
 
 ## Environment Setup
 
