@@ -59,3 +59,8 @@
 @theme {
 	--font-sans: "Satoshi-Regular", ui-sans-serif, system-ui, sans-serif;
 }
+
+body {
+  background-color: #0C0D0D;
+  color: #F2F3F3;
+}
