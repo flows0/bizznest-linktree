@@ -1,7 +1,7 @@
 import { MapPin, MousePointerClick } from "lucide-react"
 
 export default function Tag({ showStats }: { showStats: boolean }) {
-  const style = "flex items-center gap-x-2 text-brand400";
+  const style = "flex items-center gap-x-1 text-brand400";
   return (
     <div className="mt-2">
       {showStats ? (
