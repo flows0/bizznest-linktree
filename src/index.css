@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --primary: #3AF8F8;
+}
+
 @font-face {
 	font-family: 'Satoshi-Regular';
 	src: url('/fonts/Satoshi-Regular.woff2') format('woff2'),
@@ -17,6 +21,39 @@
 	font-weight: 700;
 	font-display: swap;
 	font-style: normal;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+
+  --color-brand950: #0C0D0D;
+  --color-brand900: #191A1A;
+  --color-brand800: #313535;
+  --color-brand700: #4A4F4F;
+  --color-brand600: #636969;
+  --color-brand500: #7C8383;
+  --color-brand400: #969C9C;
+  --color-brand300: #B0B5B5;
+  --color-brand200: #CACECE;
+  --color-brand100: #E5E6E6;
+  --color-brand50: #F2F3F3;
+
+  --text-h1: 90px;
+  --text-h1--line-height: 104px;
+  --text-h2: 67px;
+  --text-h2--line-height: 77px;
+  --text-h3: 51px;
+  --text-h3--line-height: 59px;
+  --text-h4: 38px;
+  --text-h4--line-height: 44px;
+  --text-h5: 28px;
+  --text-h5--line-height: 32px;
+  --text-h6: 21px;
+  --text-h6--line-height: 24px;
+  --text-p: 16px;
+  --text-p--line-height: 26px;
+  --text-small: 12px;
+  --text-small--line-height: 19px;
 }
 
 @theme {
