@@ -39,9 +39,9 @@ export default function LinkCard({
       rel="noreferrer"
       className="py-5 px-6 rounded-2xl flex items-center gap-x-4 transition-all duration-300 ease-in-out group bg-brand900 focus:outline-none focus:border-none focus:ring-2 focus:ring-primary focus:ring-offset-brand950 focus:ring-offset-2"
     >
-      <Icon className="size-12 shrink-0 transition-colors duration-300 ease-in-out text-brand50 group-hover:text-primary" />
+      <Icon className="size-12 shrink-0 transition-colors duration-300 ease-in-out text-brand200 group-hover:text-brand50 group-focus:text-brand50" />
       <div className="flex flex-1 min-w-0 flex-col gap-y-1">
-        <h2 className="text-h6 font-bold transition-colors duration-300 ease-in-out text-brand50 group-hover:text-primary">
+        <h2 className="text-h6 font-bold transition-colors duration-300 ease-in-out text-brand200 group-hover:text-brand50 group-focus:text-brand50">
           {title}
         </h2>
         {showStats ? (
