@@ -1,8 +1,11 @@
-import { type LucideIcon } from "lucide-react";
+import { MousePointerClick, TrendingUp, type LucideIcon } from "lucide-react";
 
 interface LinkCardProps {
   title: string;
   desc: string;
+  clicks: string;
+  percentage: string;
+  showStats: boolean;
   link: string;
   Icon: LucideIcon;
 }
@@ -10,6 +13,9 @@ interface LinkCardProps {
 export default function LinkCard({
   title,
   desc,
+  clicks,
+  percentage,
+  showStats,
   link,
   Icon
 }: LinkCardProps) {
@@ -20,9 +26,26 @@ export default function LinkCard({
         <h2 className="text-h6 font-bold transition-colors duration-300 ease-in-out text-brand50 group-hover:text-primary">
           {title}
         </h2>
-        <p className="text-small text-brand400">
-          {desc}
-        </p>
+        {showStats ? (
+          <div className="flex items-center gap-x-2">
+            <div className="flex items-center gap-x-1 text-brand400">
+              <MousePointerClick className="size-4.75" />
+              <p className="text-small">
+                {clicks}
+              </p>
+            </div>
+            <div className="flex items-center gap-x-1 text-brand400">
+              <TrendingUp className="size-4.75" />
+              <p className="text-small">
+                {percentage}
+              </p>
+            </div>
+          </div>
+        ) : (
+          <p className="text-small text-brand400">
+            {desc}
+          </p>
+        )}
       </div>
     </a>
   );
