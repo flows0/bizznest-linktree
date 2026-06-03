@@ -1,7 +1,7 @@
 import Tag from "./Tag";
 import BackgroundImg from "../assets/background-img.jpg";
 
-export default function Header() {
+export default function Header({ showStats }: { showStats: boolean }) {
   return (
     <div className="mt-20">
       <header className="z-10 flex flex-col items-center max-w-7xl mx-auto px-6">
@@ -14,7 +14,7 @@ export default function Header() {
         <p className="text-p mt-2 text-brand200">
           Software Engineer
         </p>
-        <Tag />
+        <Tag showStats={showStats} />
       </header>
       <div className="-z-10 absolute top-0 h-70 w-full">
         <img

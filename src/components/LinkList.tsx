@@ -10,35 +10,35 @@ const links: {
   link: string;
   Icon: typeof LayoutGrid;
 }[] = [
-  {
-    id: "portfolio",
-    title: "Portfolio",
-    desc: "billyf-portfolio.vercel.app",
-    link: "https://billyf-portfolio.vercel.app",
-    Icon: LayoutGrid,
-  },
-  {
-    id: "resume",
-    title: "Resume",
-    desc: "/files/billy-flowers-resume.pdf",
-    link: "https://billyf-portfolio.vercel.app/files/billy-flowers-resume.pdf",
-    Icon: FileUser,
-  },
-  {
-    id: "github",
-    title: "GitHub",
-    desc: "github.com/bflows",
-    link: "https://github.com/bflows",
-    Icon: IconBrandGithub,
-  },
-  {
-    id: "linkedin",
-    title: "LinkedIn",
-    desc: "linkedin.com/in/billyflowers",
-    link: "https://www.linkedin.com/in/billyflowers",
-    Icon: IconBrandLinkedin,
-  },
-];
+    {
+      id: "portfolio",
+      title: "Portfolio",
+      desc: "billyf-portfolio.vercel.app",
+      link: "https://billyf-portfolio.vercel.app",
+      Icon: LayoutGrid,
+    },
+    {
+      id: "resume",
+      title: "Resume",
+      desc: "/files/billy-flowers-resume.pdf",
+      link: "https://billyf-portfolio.vercel.app/files/billy-flowers-resume.pdf",
+      Icon: FileUser,
+    },
+    {
+      id: "github",
+      title: "GitHub",
+      desc: "github.com/bflows",
+      link: "https://github.com/bflows",
+      Icon: IconBrandGithub,
+    },
+    {
+      id: "linkedin",
+      title: "LinkedIn",
+      desc: "linkedin.com/in/billyflowers",
+      link: "https://www.linkedin.com/in/billyflowers",
+      Icon: IconBrandLinkedin,
+    },
+  ];
 
 export default function LinkList({ showStats }: { showStats: boolean }) {
   return (

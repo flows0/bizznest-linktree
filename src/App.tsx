@@ -14,7 +14,7 @@ function App() {
         showStats={showStats}
         onToggle={() => setShowStats((state) => !state)}
       />
-      <Header />
+      <Header showStats={showStats} />
       <main>
         <LinkList showStats={showStats} />
       </main>
