@@ -14,7 +14,7 @@ export default function Header({ showStats, onToggle }: { showStats: boolean; on
       </div>
       <div className="mt-15">
         <header className="z-10 flex flex-col items-center max-w-7xl mx-auto px-6">
-          <div className="size-25 overflow-hidden rounded-full ring-2 ring-brand200">
+          <div className="size-25 overflow-hidden rounded-full ring-2 ring-brand50">
             <img
               src={ProfileImg}
               alt="Profile image"
