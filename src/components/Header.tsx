@@ -1,5 +1,7 @@
 import Tag from "./Tag";
-import BackgroundImg from "../assets/background-img.webp";
+import BackgroundImgSm from "../assets/background-img-sm.webp";
+import BackgroundImgMd from "../assets/background-img-md.webp";
+import BackgroundImgLg from "../assets/background-img-lg.jpg";
 import ProfileImg from "../assets/profile-img.webp";
 import ToggleStatsBtn from "./ToggleStatsBtn";
 
@@ -20,6 +22,7 @@ export default function Header({ showStats, onToggle }: { showStats: boolean; on
               alt="Profile image"
               width={100}
               height={100}
+              decoding="async"
               className="w-full h-full rounded-full object-cover scale-125"
             />
           </div>
@@ -32,14 +35,31 @@ export default function Header({ showStats, onToggle }: { showStats: boolean; on
           <Tag showStats={showStats} />
         </header>
         <div className="-z-10 absolute top-0 h-70 w-full">
-          <img
-            src={BackgroundImg}
-            alt="Background image"
-            fetchPriority="high"
-            height={400}
-            width={1400}
-            className="h-full w-full object-cover object-center"
-          />
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcSet={BackgroundImgMd}
+              type="image/webp"
+            />
+            <source
+              media="(max-width: 1399px)"
+              srcSet={BackgroundImgSm}
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 1400px)"
+              srcSet={BackgroundImgLg}
+              type="image/jpeg"
+            />
+            <img
+              src={BackgroundImgMd}
+              alt=""
+              fetchPriority="high"
+              width={768}
+              height={512}
+              className="h-full w-full object-cover object-center"
+            />
+          </picture>
           <div
             className="absolute inset-0 bg-linear-to-b from-transparent from-20% to-brand950 to-100%"
             aria-hidden="true"
