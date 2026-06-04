@@ -6,8 +6,10 @@ export default function Footer() {
 
   return (
     <footer className="mt-12 pb-4 flex items-center justify-center">
-      <p className="text-small text-brand400">
-        Designed in Figma, built with React and Tailwind CSS {timeEmoji}
+      <p className="text-small text-center text-brand400">
+        Designed in Figma,
+        <br className="sm:hidden" /> {" "}
+        built with React and Tailwind CSS {timeEmoji}
       </p>
     </footer>
   );
