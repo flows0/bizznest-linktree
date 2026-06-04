@@ -1,6 +1,8 @@
-# BizzNest Linktree (Technical Assessment)
+# BizzNest Linktree (Associate Assessment)
 
 A Linktree-style page in React displaying my profile and social links with one JavaScript feature that brings it to life.
+
+### [🟢 Live Demo Link](https://bflows.github.io/bizznest-linktree)
 
 ## JavaScript Feature
 
@@ -8,7 +10,7 @@ A Linktree-style page in React displaying my profile and social links with one J
 
 When stats are on:
 
-- **Total clicks** — per-link click count for the last 7 days, formatted with locale separators (e.g. `93`).
+- **Total clicks** — per-link click count for the last 7 days.
 - **Change percentage** — week-over-week trend with an up/down icon; green for positive, red for negative.
 - **Sparkline** — a small SVG line chart of daily clicks over the same 7-day window; stroke color matches the trend direction.
 
@@ -51,4 +53,4 @@ npm install
 npm run dev
 ```
 
-### 4.) Click the localhost link in the terminal to view the project live.
+### 4.) Click the localhost link in the terminal to view the project.
