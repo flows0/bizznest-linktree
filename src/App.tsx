@@ -10,6 +10,7 @@ function App() {
 
   return (
     <>
+      <meta name="description" content="A modern Linktree with a little JS personality." />
       <ToggleStatsBtn
         showStats={showStats}
         onToggle={() => setShowStats((state) => !state)}
