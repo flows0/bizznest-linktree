@@ -1,7 +1,7 @@
-import ProfileImg from "../../../public/assets/profile-img.webp";
-import BackgroundSmImg from "../../../public/assets/background-img-sm.webp";
-import BackgroundMdImg from "../../../public/assets/background-img-md.webp";
-import BackgroundLgImg from "../../../public/assets/background-img-lg.jpg";
+import ProfileImg from "../../assets/profile-img.webp";
+import BackgroundSmImg from "../../assets/background-img-sm.webp";
+import BackgroundMdImg from "../../assets/background-img-md.webp";
+import BackgroundLgImg from "../../assets/background-img-lg.jpg";
 import ToggleStats from "../../modules/analytics/components/ToggleStats";
 import AnalyticsTag from "../../modules/analytics/components/AnalyticsTag";
 
