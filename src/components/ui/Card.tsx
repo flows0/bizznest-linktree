@@ -1,5 +1,5 @@
 import type { CardProps } from "../../types/card";
-import { formatPercent } from "../../util/formatPercent";
+import { formatPercentage } from "../../util/formatPercentage";
 import Linechart from "../../modules/analytics/components/Linechart";
 import { MousePointerClick, TrendingDown, TrendingUp } from "lucide-react";
 
@@ -40,7 +40,7 @@ export default function Card({
             <div className={`flex items-center gap-x-1 ${trendColor}`}>
               <TrendIcon className="size-4.75" />
               <p className="text-small">
-                {formatPercent(changePercent)}
+                {formatPercentage(changePercent)}
               </p>
             </div>
           </div>
