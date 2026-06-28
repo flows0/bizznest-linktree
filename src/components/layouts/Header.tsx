@@ -1,27 +1,34 @@
-import Tag from "./Tag";
-import BackgroundImgSm from "../assets/background-img-sm.webp";
-import BackgroundImgMd from "../assets/background-img-md.webp";
-import BackgroundImgLg from "../assets/background-img-lg.jpg";
-import ProfileImg from "../assets/profile-img.webp";
-import ToggleStatsBtn from "./ToggleStatsBtn";
+import ProfileImg from "../../../public/assets/profile-img.webp";
+import BackgroundSmImg from "../../../public/assets/background-img-sm.webp";
+import BackgroundMdImg from "../../../public/assets/background-img-md.webp";
+import BackgroundLgImg from "../../../public/assets/background-img-lg.jpg";
+import ToggleStats from "../../modules/analytics/components/ToggleStats";
+import AnalyticsTag from "../../modules/analytics/components/AnalyticsTag";
 
-export default function Header({ showStats, onToggle }: { showStats: boolean; onToggle: () => void }) {
+export default function Header({
+  showStats,
+  onToggle
+}: {
+  showStats: boolean;
+  onToggle: () => void
+}) {
   return (
     <>
       <div className="relative z-10 flex justify-end px-6 pt-5">
-        <ToggleStatsBtn
+        <ToggleStats
           showStats={showStats}
           onToggle={onToggle}
         />
       </div>
-      <div className="mt-15">
-        <header className="z-10 flex flex-col items-center max-w-7xl mx-auto px-6">
+      <header className="mt-15">
+        <div className="z-10 flex flex-col items-center max-w-7xl mx-auto px-6">
           <div className="size-25 overflow-hidden rounded-full ring-2 ring-brand50">
             <img
               src={ProfileImg}
               alt="Profile image"
               width={100}
               height={100}
+              draggable={false}
               decoding="async"
               className="w-full h-full rounded-full object-cover scale-125"
             />
@@ -32,27 +39,27 @@ export default function Header({ showStats, onToggle }: { showStats: boolean; on
           <p className="text-p mt-2 text-brand200">
             Software Engineer
           </p>
-          <Tag showStats={showStats} />
-        </header>
+          <AnalyticsTag showStats={showStats} />
+        </div>
         <div className="-z-10 absolute top-0 h-70 w-full">
           <picture>
             <source
               media="(max-width: 767px)"
-              srcSet={BackgroundImgMd}
+              srcSet={BackgroundSmImg}
               type="image/webp"
             />
             <source
               media="(max-width: 1399px)"
-              srcSet={BackgroundImgSm}
+              srcSet={BackgroundMdImg}
               type="image/webp"
             />
             <source
               media="(min-width: 1400px)"
-              srcSet={BackgroundImgLg}
+              srcSet={BackgroundLgImg}
               type="image/jpeg"
             />
             <img
-              src={BackgroundImgMd}
+              src={BackgroundSmImg}
               alt="Background image"
               fetchPriority="high"
               width={768}
@@ -65,7 +72,7 @@ export default function Header({ showStats, onToggle }: { showStats: boolean; on
             aria-hidden="true"
           />
         </div>
-      </div>
+      </header>
     </>
   );
 }

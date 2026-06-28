@@ -1,6 +1,12 @@
 import { ChartLine } from "lucide-react";
 
-export default function ToggleStatsBtn({ onToggle, showStats }: { onToggle: () => void, showStats: boolean }) {
+export default function ToggleStats({ 
+  onToggle, 
+  showStats 
+}: { 
+  onToggle: () => void, 
+  showStats: boolean 
+}) {
   return (
     <button
       type="button"

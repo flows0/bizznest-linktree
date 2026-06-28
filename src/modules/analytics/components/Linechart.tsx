@@ -1,16 +1,16 @@
-interface SparklineProps {
+interface LinechartProps {
   data: number[];
   positive: boolean;
   width?: number;
   height?: number;
 }
 
-export default function Sparkline({
+export default function Linechart({
   data,
   positive,
   width = 72,
   height = 32,
-}: SparklineProps) {
+}: LinechartProps) {
   if (data.length < 2) return null;
 
   const min = Math.min(...data);

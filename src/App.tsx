@@ -1,21 +1,23 @@
 import { useState } from 'react'
-import './App.css'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import LinkList from './components/LinkList'
+import Header from './components/layouts/Header'
+import CardList from './modules/analytics/components/CardList'
+import Footer from './components/layouts/Footer'
 
 function App() {
   const [showStats, setShowStats] = useState(false)
 
   return (
     <>
-      <meta name="description" content="A modern Linktree with a little JS personality." />
-      <Header 
+      <meta
+        name="description"
+        content="A modern Linktree with a little JS personality."
+      />
+      <Header
         showStats={showStats}
         onToggle={() => setShowStats((state) => !state)}
       />
       <main>
-        <LinkList showStats={showStats} />
+        <CardList showStats={showStats} />
       </main>
       <Footer />
     </>

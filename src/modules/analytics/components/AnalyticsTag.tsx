@@ -1,6 +1,6 @@
 import { MapPin, MousePointerClick } from "lucide-react"
 
-export default function Tag({ showStats }: { showStats: boolean }) {
+export default function AnalyticsTag({ showStats }: { showStats: boolean }) {
   const style = "flex items-center gap-x-1 text-brand400";
 
   return (
@@ -15,8 +15,7 @@ export default function Tag({ showStats }: { showStats: boolean }) {
           <MapPin className="size-5.25" />
           <p className="text-small">Modesto, CA</p>
         </div>
-      )
-      }
+      )}
     </div >
   );
 }
