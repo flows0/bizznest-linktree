@@ -20,8 +20,8 @@ export const cardLinks: LinkProps[] = [
   {
     id: "github",
     title: "GitHub",
-    desc: "github.com/bflows",
-    link: "https://github.com/bflows",
+    desc: "github.com/flows0",
+    link: "https://github.com/flows0",
     Icon: IconBrandGithub,
   },
   {
