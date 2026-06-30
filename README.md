@@ -19,7 +19,7 @@ Change emoji in footer based on clients time. If hour is greater than or equal t
 ## Screenshots
 
 <img
-  src="https://i.imgur.com/eG0wa19.png"
+  src="https://i.imgur.com/7uDg4Ba.png"
 />
 
 ---
