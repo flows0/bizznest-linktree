@@ -1,83 +1,56 @@
-# BizzNest Linktree (Associate Assessment)
+# Associate Technicial Assessment
 
-A Linktree-style page in React displaying my profile and social links with JavaScript features that bring it to life.
+Linktree-style page in React with one JavaScript feature that brings it to life. Deployed to GitHub Pages.
 
-### [🟢 Deployed Project Link](https://bflows.github.io/bizznest-linktree)
+---
 
-## Lighthouse Score (99+)
+## Features
+
+### Toggle Analytics
+
+Display the total clicks from the last 7 days with a percentage difference from the previous week visualized with a linechart backed by mocked data. I've always wanted to implement graphs or a custom SVG and took this opportunity to do it. Tricky part was structuring data to track the amount of clicks per day and create `x,y` points for a polyline using that data. If I had more time, I would create a database to track link clicks so the data updates in real-time.
+
+### Time-based Emoji
+
+Change emoji in footer based on clients time. If hour is greater than or equal to 6 and less than 20 display 🌞 else 🌚. Simple but interactive way to include client's context inside the application.
+
+---
+
+## Screenshots
+
 <img
   src="https://i.imgur.com/eG0wa19.png"
 />
 
-## JavaScript Features
+---
 
-### Link analytics display
+### Tech Stack
 
-A stats toggle (chart icon in the top-right) switches each link card from its URL description to a compact analytics view.
-
-When stats are on:
-
-- **Total clicks** — per-link click count for the last 7 days.
-- **Change percentage** — week-over-week trend with an up/down icon; green for positive, red for negative.
-- **Sparkline** — a small SVG line chart of daily clicks over the same 7-day window; stroke color matches the trend direction.
-
-The header tag also swaps from location to “Total clicks (last 7 days)” so the page context matches the cards.
-
-#### Why this feature
-
-Linktree pages are often static lists of URLs. A lightweight analytics layer shows how each destination performs at a glance without leaving the profile view.
-
-#### Tricky bits
-
-- **Sparkline scaling** — daily values are mapped to SVG coordinates using min/max normalization so flat or noisy series still read clearly; a zero range falls back to `1` to avoid dividing by zero.
-- **Dual card modes** — one `LinkCard` toggles between description and stats via `showStats`, keeping layout stable while swapping middle content and conditionally rendering the sparkline on the right.
-- **Trend styling** — change %, icon, and sparkline stroke stay in sync through a single `positive` flag based on `changePercent >= 0`.
-
-#### With more time
-
-- Implement real click tracking using `localStorage` instead of mock data in `src/data/linkStats.ts`.
-- Calculate change % from `history` rather than storing it separately.
-- Animate sparkline draw-in and support empty or single-point histories.
-
-The mock data lives in `src/data/linkStats.ts` (clicks, `changePercent`, and 7-day `history` per link).
+- TypeScript
+- React
+- Tailwind CSS
 
 ---
 
-### Footer time-of-day emoji
+## Getting Started
 
-The footer text appends a sun or moon emoji based on the visitor’s local time.
+### Prerequisites
 
-#### Why this feature
+- Node.js 22+
+- npm
 
-I wanted to add a small touch without competing with the analytics toggle. A time-aware emoji is a quiet way to show the app reacting to the user’s context.
+### Installation
 
-#### Tricky bits
+```bash
+git clone https://github.com/flows0/bizznest-linktree.git
 
-- **Boundary hours** — `getHours()` is 0–23; hour `6` is sun and hour `20` is moon.
-- **Stale emoji on a long-lived tab** — If someone leaves the tab open across 6 AM or 8 PM, it won’t update until a refresh or re-render.
+cd bizznest-linktree
 
-#### With more time
-
-- Create a timer so the emoji updates live.
-- Add `aria-label` on the emoji (e.g. “daytime” / “nighttime”) for screen readers
-
-## Environment Setup
-
-### 1.) Clone GitHub repository.
-
-```
-git clone https://github.com/bflows/bizznest-linktree.git
-```
-
-### 2.) Install npm packages in root folder. `/bizznest-linktree`
-```
-cd bizznest-linktree/
 npm install
 ```
 
-### 3.) Run development script.
-```
+### Run the Development Server
+
+```dash
 npm run dev
 ```
-
-### 4.) Click the localhost link in the terminal to view the project.
