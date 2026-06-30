@@ -19,7 +19,7 @@ Change emoji in footer based on clients time. If hour is greater than or equal t
 ## Screenshots
 
 <img
-  src="https://i.imgur.com/7uDg4Ba.png"
+  src="./public/screenshots/lighthouse-benchmark.png"
 />
 
 ---
